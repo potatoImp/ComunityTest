@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信息</title>
+    <link rel="stylesheet" type="text/css" href="../css/login_in/info.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+</head>
+<body>
+    <div class="header">
+    <div class="header_w">
+        <div class="logo"><a class="logo_a" href="" title=""></a></div>
+
+        <div class="nav">
+            <li class="nav_li"><a class="nav_li_a" title="主站" href="index.html" target="_self">主站</a></li>
+            <li class="nav_li"><a class="nav_li_a" title="博客" href="" target="_self">博客</a></li>
+            <li class="nav_li"><a class="nav_li_a" title="下载" href="" target="_self">下载</a></li>
+
+            <li class="nav_li_more"><a class="nav_li_a" title="更多" href="">更多</a>
+                <div class="subnav" >
+                    <div class="subnav43"></div>
+                    <ul class="subnav_ul">
+                        <a class="subnav_ul_a" href="" title="" target="_self">下载</a>
+                        <a class="subnav_ul_a" href="" title="" target="_self"></a>
+                        <a class="subnav_ul_a" href="" title="" target="_self"></a>
+                    </ul>
+                </div>
+            </li>
+            <div class="nav_part"></div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="search">
+            <div class="search_con">
+                <input name="bolg" value="" type="hidden">
+                <input name=""      value="" type="hidden">
+                <input type="hidden" name="b" value="">
+                <input type="hidden" name="" value="">
+                <input id="search_input" class="search_input" type="text" name="" autocomplete="off" placeholder="文章、资源">
+                <!--autocomplete="off"关闭自动记录 -->
+                <a href="" class="search_a" onclick=""></a>
+            </div>
+
+        </div>
+
+        <div class="header_right_nav">
+            <li class="header_photo_li">
+                <a class="header_photo_li_a" href="https://www.nyato.com/home/" title="偶字幕">
+                    <div class="header_photo_box">
+                        <img class="header_photo_img" src="//img.nyato.com/data/upload/avatar/2019/0210/09/5c5f7cd3a4371.jpg!100x100cut" alt="偶字幕">
+                    </div>
+                    <span class="header_photo_text" title="个人页面">个人页面</span>
+                </a>
+                <div class="clear"></div>
+            </li>
+            <li class="fl" style="width: 10px;">&nbsp;</li>
+            <li class="header_issue_li">
+                <div class="header_issue_li_box">
+                    <a class="header_issue_li_a" href="" title="发布帖子" target="_blank"></a>
+                    我要发布</div>
+            </li>
+            <li class="fl" style="width: 10px;">&nbsp;</li>
+        </div>
+    </div>
+
+    <div class="header_tail"></div>
+
+</div>
+
+    <div class="container_top"></div>
+    <div class="container">
+        <div class="container_con">
+
+            <div class="info_left_nav">
+                <ul class="info_left_nav_ul">
+
+                    <li class="info_left_nav_ul_li">
+                        <a href="https://www.nyato.com/home/" class="info_left_nav_ul_li_a ">
+                            <b class="info_left_nav_ico1 "></b>个人信息
+                        </a>
+                    </li>
+
+                    <li class="info_left_nav_ul_li">
+                        <a href="https://www.nyato.com/home/" class="info_left_nav_ul_li_a">
+                            <b class="info_left_nav_ico2 "></b>我的博客
+                        </a>
+                    </li>
+
+                    <li class="info_left_nav_ul_li">
+                        <a href="https://www.nyato.com/index.php?app=public&amp;mod=Index&amp;act=index&amp;type=2" class="info_left_nav_ul_li_a">
+                            <b class="info_left_nav_ico3"></b>我的分享
+                        </a>
+                    </li>
+
+                    <li class="info_left_nav_ul_li">
+                        <a href="https://www.nyato.com/index.php?app=public&amp;mod=Index&amp;act=index&amp;type=2" class="info_left_nav_ul_li_a">
+                            <b class="info_left_nav_ico4"></b>我的消息
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="info_con">
+                <div class="info_con_box">
+                    <div class="info_con_setting">
+                        <div class="info_setting_con">
+                            <ul class="info_setting_ul">
+                                <li class="info_setting_ul_li">
+                                    <a class="info_setting_ul_li_a" href="">
+                                        资料信息
+                                    </a>
+                                </li>
+                                <li class="info_setting_ul_li">
+                                    <a class="info_setting_ul_li_a" href="">
+                                        修改头像
+                                    </a>
+                                </li>
+                                <li class="info_setting_ul_li">
+                                    <a class="info_setting_ul_li_a" href="">
+                                        重置密码
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="info_setting_list">
+                        <div class="info_setting_list_box">
+                            <form action="https://www.nyato.com/index.php?app=public&amp;mod=Account&amp;act=doSaveProfile"
+                                  method="post" model-node="account_save">
+                                <div class="setting_list_form_box">
+                                    <ul class="setting_list_ul">
+                                        <li class="setting_list_ul_li">
+                                            <div class="setting_list_ul_li_text">昵称</div>
+                                            <div class="setting_list_name_input">
+                                            <input type="text" event-node="uname" event-args="old_name=偶字幕" name="uname" checkurl="https://www.nyato.com/index.php?app=public&amp;mod=Register&amp;act=isUnameAvailable" autocomplete="off" value="偶字幕" class="py_input bordercolor" size="40" placeholder="">
+                                            <input type="hidden" name="old_name" value="偶字幕">
+                                            </div>
+                                            <span class="setting_list_name_notice">请输入2-10个字符，支持中英文、数字、下划线</span>
+                                        </li>
+                                        <li class="setting_list_ul_li">
+                                            <div class="setting_list_ul_li_text">性别</div>
+                                            <div class="suer_sex">
+                                                <div class="suer_select">
+                                                    <div class="suer_male">
+                                                        <label for="male">
+                                                            <input type="radio" name="sex" id="male" value="1" checked="checked">男
+                                                        </label>
+                                                        <span class="suer_btn suer_active">男</span>
+                                                    </div>
+                                                    <div class="suer_female">
+                                                        <label for="suer_female">
+                                                            <input type="radio" name="sex" id="female" value="2">女
+                                                        </label>
+                                                        <span class="suer_btn ">女</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <script type="text/javascript">
+                                                $(".suer_select label").click(function() {
+                                                    $(this).siblings("span").addClass("suer_active");
+                                                    $(this).parent().siblings("div").find("span").removeClass("suer_active");
+                                                });
+                                            </script>
+                                        </li>
+                                        <li class="setting_list_ul_li">
+                                            <div class="setting_list_ul_li_text">介绍:</div>
+                                            <div class="setting_introduce_con">
+                                            <textarea name="intro" rows="" cols="" class="radius"></textarea>
+                                            </div>
+                                        </li>
+                                        <li class="setting_list_ul_li">
+                                            <div class="setting_list_ul_li_text"></div>
+                                            <a class="setting_btn_a">确认更改</a>
+                                        </li>
+                                    </ul>
+                                    <div class="clear"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <ul class="info_con_ul">
+
+
+                        <div class="clear"></div>
+                        <p class="info_con_ul_p">抱歉，没有相关信息</p>
+
+
+
+                        <div id="page" class="info_page">
+
+                        </div>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="w300 fr">
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="hidden">
+        <div class="hidden_button" style="margin-right: -106px;">
+            <div class="changyongright">
+                <script type="text/javascript">
+                    $(function(){
+                        $(".changyongright .rollback").click(function(){
+                            $("html,body").animate({scrollTop:"0px"},100);
+                        });
+                    });
+                </script>
+                <a title="回到顶部" class="rollback"><img src="../img/rollback.png"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer_new">
+
+            <div class="footer_left">
+                <div class="footer_new_title">友情链接</div>
+                <ul class="footer_new_ul">
+                    <a href="http://www.moejam.com" class="footer_new_ul_a" target="_blank">梦域动漫网</a>
+                    <a href="http://www.missevan.com" class="footer_new_ul_a" target="_blank">Missevan</a>
+                    <a href="http://www.moe123.net/" class="footer_new_ul_a" target="_blank">萌导航</a>
+                    <a href="http://mag.moe/" class="footer_new_ul_a" target="_blank">卖萌</a>
+                    <a href="https://www.yuanyintang.com/" class="footer_new_ul_a" target="_blank">源音塘</a>
+                    <a href="http://www.comicyu.com" class="footer_new_ul_a" target="_blank">漫域网</a>
+                    <a href="http://www.5coser.com" class="footer_new_ul_a" target="_blank">桐萌动漫</a>
+                    <a href="http://www.u17.com/" class="footer_new_ul_a" target="_blank">有妖气</a>
+                    <a href="http://www.cccnews.com.cn/" class="footer_new_ul_a" target="_blank">中国动漫产业网</a>
+                    <a href="http://www.mz-oneacg.com/" class="footer_new_ul_a" target="_blank">梦之翼</a>
+                    <a href="http://mcyacg.com/" class="footer_new_ul_a" target="_blank">梦次元</a>
+                    <a href="http://www.ishangman.com/" class="footer_new_ul_a" target="_blank">尚漫</a>
+                    <a href="http://comic.le.com/" class="footer_new_ul_a" target="_blank">乐视动漫频道</a>
+                    <a href="http://www.gxdmw.com" class="footer_new_ul_a" target="_blank">高校动漫网</a>
+                    <a href="http://www.acgvr.com/index.html" class="footer_new_ul_a" target="_blank">超次元</a>
+                    <a href="http://www.linovel.net/" class="footer_new_ul_a" target="_blank">轻之文库</a>
+                    <a href="https://www.douyu.com" class="footer_new_ul_a" target="_blank">斗鱼</a>
+                    <a href="https://www.dajiaochongmanhua.com/" class="footer_new_ul_a" target="_blank">大角虫漫画</a>
+                </ul>
+
+
+            </div>
+
+            <div class="footer_info">
+                <div class="footer_info_title">官方信息</div>
+                <a title="点此切换手机版模式" class="footer_info_a" href="https://www.nyato.com/index.php?app=index&amp;mod=Index&amp;act=wwwToWap">Wap版</a>
+                <a title="法律声明" class="footer_info_a" href="statement.html">法律声明</a>
+                <a title="喵特工" class="footer_info_a" href="sta_agent">喵特工</a>
+                <a title="关于我们" class="footer_info_a" href="moelove.cn/">关于我们</a>
+                <a title="公司招聘" class="footer_info_a" href="moelove-Recruitment.html">公司招聘</a>
+                <a key="5492599f3b05a3da0fbc76d9" class="footer_info_a" href="http://www.anquan.org/authenticate/cert/?site=nyato.com&amp;at=realname" target="_blank">安全联盟</a>
+                <a title="关于萌爱" class="footer_info_a" href="about.html">社区历史</a>
+                <a title="联系我们" class="footer_info_a" href="help/">联系我们</a>
+                <a title="服务协议" class="footer_info_a" href="agreement.html">服务协议</a>
+                <a title="授权条款" class="footer_info_a" href="">授权条款</a>
+                <div class="footer_info_im"><img src="logo.png" class="footer_info_img"></div>
+            </div>
+
+            <div class="supervision">
+                <img src="../img/footer/supervision1.png" alt="" class="supervision_img"><a href="http://www.miitbeian.gov.cn/" target="_blank" class="super_a">粤网文</a>
+                <img src="../img/footer/supervision2.png" alt="" class="supervision_img"><a href="http://www.miitbeian.gov.cn/" target="_blank" class="super_a">粤公网安备</a>
+                <img src="ww.png" alt="" class="supervision_img"><a href="http://www.gdjubao.cn/" target="_blank" class="super_a">粤互联网违法和不良信息举报中心</a>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>

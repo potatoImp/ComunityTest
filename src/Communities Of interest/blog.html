@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>博客</title>
+    <link rel="stylesheet" type="text/css" href="css/blog.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        !function(){function n(n,e,t){return n.getAttribute(e)||t}function e(n){return document.getElementsByTagName(n)}function t(){var t=e("script"),o=t.length,i=t[o-1];return{l:o,z:n(i,"zIndex",-1),o:n(i,"opacity",.5),c:n(i,"color","0,0,0"),n:n(i,"count",99)}}function o(){a=m.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,c=m.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function i(){r.clearRect(0,0,a,c);var n,e,t,o,m,l;s.forEach(function(i,x){for(i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>a||i.x<0?-1:1,i.ya*=i.y>c||i.y<0?-1:1,r.fillRect(i.x-.5,i.y-.5,1,1),e=x+1;e<u.length;e++)n=u[e],null!==n.x&&null!==n.y&&(o=i.x-n.x,m=i.y-n.y,l=o*o+m*m,l<n.max&&(n===y&&l>=n.max/2&&(i.x-=.03*o,i.y-=.03*m),t=(n.max-l)/n.max,r.beginPath(),r.lineWidth=t/2,r.strokeStyle="rgba("+d.c+","+(t+.2)+")",r.moveTo(i.x,i.y),r.lineTo(n.x,n.y),r.stroke()))}),x(i)}var a,c,u,m=document.createElement("canvas"),d=t(),l="c_n"+d.l,r=m.getContext("2d"),x=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(n){window.setTimeout(n,1e3/45)},w=Math.random,y={x:null,y:null,max:2e4};m.id=l,m.style.cssText="position:fixed;top:0;left:0;z-index:"+d.z+";opacity:"+d.o,e("body")[0].appendChild(m),o(),window.onresize=o,window.onmousemove=function(n){n=n||window.event,y.x=n.clientX,y.y=n.clientY},window.onmouseout=function(){y.x=null,y.y=null};for(var s=[],f=0;d.n>f;f++){var h=w()*a,g=w()*c,v=2*w()-1,p=2*w()-1;s.push({x:h,y:g,xa:v,ya:p,max:6e3})}u=s.concat([y]),setTimeout(function(){i()},100)}();
+    </script>
+
+    <div class="header">
+    <div class="header_w">
+        <div class="logo"><a class="logo_a" href="" title=""></a></div>
+
+        <div class="nav">
+            <li class="nav_li"><a class="nav_li_a" title="主站" href="index.html" target="_self">主站</a></li>
+            <li class="nav_li"><a class="nav_li_a" title="博客" href="" target="_self">博客</a></li>
+            <li class="nav_li"><a class="nav_li_a" title="下载" href="" target="_self">下载</a></li>
+
+            <li class="nav_li_more"><a class="nav_li_a" title="更多" href="">更多</a>
+                <div class="subnav" >
+                    <div class="subnav43"></div>
+                    <ul class="subnav_ul">
+                        <a class="subnav_ul_a" href="" title="" target="_self">下载</a>
+                        <a class="subnav_ul_a" href="" title="" target="_self"></a>
+                        <a class="subnav_ul_a" href="" title="" target="_self"></a>
+                    </ul>
+                </div>
+            </li>
+            <div class="nav_part"></div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="search">
+            <div class="search_con">
+                <input name="bolg" value="" type="hidden">
+                <input name=""      value="" type="hidden">
+                <input type="hidden" name="b" value="">
+                <input type="hidden" name="" value="">
+                <input id="search_input" class="search_input" type="text" name="" autocomplete="off" placeholder="文章、资源">
+                <!--autocomplete="off"关闭自动记录 -->
+                <a href="" class="search_a" onclick=""></a>
+            </div>
+
+        </div>
+
+        <div class="login">
+            <div class="login_nav">
+                <li class="login_nav_li"><a class="login_nav_a" href="" title="登录社区">登录</a></li>
+                <li class="login_nav_li"><a class="login_nav_a" href="" title="还没有账号？点此前往注册账号">注册账号</a></li>
+            </div>
+        </div>
+    </div>
+
+    <div class="header_tail"></div>
+
+</div>
+
+    <div class="banner" >
+    <a  class="banner_a" href=""> </a>
+</div>
+
+    <div class="container">
+        <div class="invitation">
+            <div class="invitation_tit">
+                <a href="https://" class="invitation_tit_a" title="社区">社区</a>
+                &nbsp;>
+                <a href="https://" class="invitation_tit_a" title="博客">博客</a>
+                &nbsp;>
+                <a href="https://" class="invitation_tit_a" title="生活">生活</a>
+            </div>
+
+            <div class="invitation_details">
+                <div class="invitation_details_left">
+                    <h1 class="invitation_detail_left_h1">标题xxxx</h1>
+
+                    <div class="invitation_detail_left_tit">
+                        <span class="invitation_detail_left_tit_span">
+                            <b class="invitation_detail_left_tit_span_b0"></b>
+                            活跃区
+                        </span>
+                        <span class="invitation_detail_left_tit_span">
+                            <b class="detail_left_tit_span_b">|</b>
+                            <b class="invitation_detail_left_tit_span_b0"></b>
+                            原创
+                        </span>
+                        <span class="invitation_detail_left_tit_span">2009-01-08</span>
+                        <span class="invitation_detail_left_tit_span">
+                            <a class="invitation_detail_left_tit_span_a" onclick="denounce_feed();">举报内容</a>
+                        </span>
+                        <a class="invitation_detail_left_tit_a" href="" title="文本">
+                            <b class="invitation_detail_left_tit_a_b"></b>
+                            深圳市第一届。。。。
+
+                        </a>
+                    </div>
+
+                    <div class="invitation_detail_left_border"></div>
+
+                    <div class="invitation_detail_left_con">
+                        <div id="feed_content" class="feed_content">
+                                这次我在<a class="feed_content_a" href="">#2019深圳第一届龙岗凤凰祭#</a> 是特约嘉宾哦！<br>
+                                喜欢我的小伙伴可以去漫展找我集邮，<br>
+                                我会把自己精心准备的礼品送给你哒！
+                        </div>
+
+                        <div class="detail_photo_box">
+                            <div class="photo" id="post_images">
+                                <div class="photo_img" data-url="https://img.nyato.com/data/upload/image/20190106/1546742085305963.jpg" data-thumbnail-path="https://img.nyato.com/data/upload/image/20190106/1546742085305963.jpg!120x120cut">
+                                    <img class="detail_photo_box_img" src="https://img.nyato.com/data/upload/image/20190106/1546742085305963.jpg!autoxauto" onclick="FWDRL.show('post_images', 0);">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clear"></div>
+                </div>
+
+                <div class="invitation_detail_left_post_comment">
+                    <div class="h25 line25 bgf5 f12 s8 texthidden radius mb10 mr20 fr" style="width: 732px; display: none;" id="reply_block">
+        <span class="w100s fl"><a class="f12 s00 liti fl pl5 pr5">@<span id="reply_user"></span></a><span class="fl">：</span><span class="fl" id="reply_content"></span>
+        <a class="f12 s1 liti fr pl5 pr5" onclick="reply_cancel();">取消回复</a>
+    </span></div>
+
+                    <div class="clear"></div>
+
+                    <div class="post_comment_login">
+                        <div class="post_comment_box">
+                            还未登录呢，请先
+                            <a class="post_comment_box_a" href="javascript:void(0)" rel="#TB_inline?height=580&amp;width=450&amp;inlineId=myOnPageContent">
+                                登录
+                            </a> 哦
+                        </div>
+                        <div class="post_comment_input" model-node="comment_textarea">
+                            <div class="post_comment_input_con" model-node="mini_editor">
+                                    <textarea id="comment_inputor" class="post_comment_input_con_texta" event-node="comment_mini_editor_textarea" model-args="t=comment" style="display: none;">
+
+                                    </textarea>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="post_comment_input_hidden"></div>
+                        </div>
+                    </div>
+
+                    <div class="invitation_left_comment">
+                        <div class="invitation_left_comment_con" id="comment_page">
+                            <div class="comment_con_box">
+                                <div class="comment_con_tit">
+                                    <div class="comment_con_tit_left"></div>
+
+                                    <ul class="comment_con_tit_ul">
+                                        <li class="comment_con_tit_li">
+                                            <span class="comment_con_tit_li_span">共33条评论</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="comment_con_list">
+                                <div class="com_list_box">
+                                    <ul class="com_list_box_ul">
+                                        <li class="com_list_box_ul_li" id="comment_2227442" data-comment_id="2227442" model-node="comment_list">
+                                            <div class="com_list_ul_li_im">
+                                                <a href="https://www.nyato.com/user/2889929" class="com_list_ul_li_a">
+                                                    <img src="//img.nyato.com/data/upload/avatar/2019/0113/18/5c3b0eff92385.png!50x50cut" alt="禾禾禾奈" class="comment_user">
+                                                </a>
+
+                                                <div class="com_list_ul_li_focus">
+                                                    <a class="com_list_ul_li_focusOn_a" data-type="doFollow" onclick="doFollow(this, 2889929);">关注</a>
+                                                    <a class="com_list_ul_li_focusOff_a" data-type="unFollow" onclick="doFollow(this, 2889929);" style="display: none;">取消关注</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="com_list_ul_li_con">
+                                                <a href="https://www.nyato.com/user/2889929" class="com_list_ul_li_focus_tit_a" name="comment_user" data-uid="2889929">禾禾禾奈</a>
+                                                <div class="com_list_ul_li_con_box">
+                                                    <span name="comment_content" class="com_list_ul_li_con_box_span">怎么不修紧一点啊老妹</span>
+                                                </div>
+                                                <div class="com_list_ul_li_con_extra">
+                                                    <ul class="com_list_ul_li_con_extra_ul" id="gallery_2227442">
+                                                    </ul>
+                                                </div>
+
+                                                <div class="com_list_ul_li_replypost">
+                                                    <p class="replypost_floor_p">33楼</p>
+                                                    <span class="replypost_time_span">2019-01-14 00:16</span>
+                                                    <a class="replypost_reply_a" data-type="reply">回复</a>
+                                                    <a class="replypost_report_a" data-type="denounce" title="举报" onclick="denounce_comment(this);">举报</a>
+                                                    <div class="replypost_manage_box">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="postmore"><span class="postmore_span">
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="com_list_box_ul_li" id="comment_2227442" data-comment_id="2227442" model-node="comment_list">
+                                            <div class="com_list_ul_li_im">
+                                                <a href="https://www.nyato.com/user/2889929" class="com_list_ul_li_a">
+                                                    <img src="//img.nyato.com/data/upload/avatar/2019/0113/18/5c3b0eff92385.png!50x50cut" alt="禾禾禾奈" class="con_list_ul_li_img">
+                                                </a>
+
+                                                <div class="com_list_ul_li_focus">
+                                                    <a class="com_list_ul_li_focusOn_a" data-type="doFollow" onclick="doFollow(this, 2889929);">关注</a>
+                                                    <a class="com_list_ul_li_focusOff_a" data-type="unFollow" onclick="doFollow(this, 2889929);" style="display: none;">取消关注</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="com_list_ul_li_con">
+                                                <a href="https://www.nyato.com/user/2889929" class="com_list_ul_li_focus_tit_a" name="comment_user" data-uid="2889929">禾禾禾奈</a>
+                                                <div class="com_list_ul_li_con_box">
+                                                    <span name="com_list_ul_li_con_box_span">怎么不修紧一点啊老妹</span>
+                                                </div>
+                                                <div class="com_list_ul_li_con_extra">
+                                                    <ul class="com_list_ul_li_extra_ul" id="gallery_2227442">
+                                                    </ul>
+                                                </div>
+                                                <div class="com_list_ul_li_replypost">
+                                                    <p class="replypost_floor_p">33楼</p><span class="replypost_time_span">2019-01-14 00:16</span>
+                                                    <a class="replypost_reply_a" data-type="reply">回复</a>
+                                                    <a class="replypost_report_a" data-type="denounce" title="举报" onclick="denounce_comment(this);">举报</a>
+                                                    <div class="replypost_manage_box">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="postmore"><span class="postmore_span">
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="com_list_box_ul_li" id="comment_2227442" data-comment_id="2227442" model-node="comment_list">
+                                            <div class="com_list_ul_li_im">
+                                                <a href="https://www.nyato.com/user/2889929" class="com_list_ul_li_a">
+                                                    <img src="//img.nyato.com/data/upload/avatar/2019/0113/18/5c3b0eff92385.png!50x50cut" alt="禾禾禾奈" class="con_list_ul_li_img">
+                                                </a>
+
+                                                <div class="com_list_ul_li_focus">
+                                                    <a class="com_list_ul_li_focusOn_a" data-type="doFollow" onclick="doFollow(this, 2889929);">关注</a>
+                                                    <a class="com_list_ul_li_focusOff_a" data-type="unFollow" onclick="doFollow(this, 2889929);" style="display: none;">取消关注</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="com_list_ul_li_con">
+                                                <a href="https://www.nyato.com/user/2889929" class="com_list_ul_li_focus_tit_a" name="comment_user" data-uid="2889929">禾禾禾奈</a>
+                                                <div class="com_list_ul_li_con_box">
+                                                    <span name="com_list_ul_li_con_box_span">怎么不修紧一点啊老妹</span>
+                                                </div>
+                                                <div class="com_list_ul_li_con_extra">
+                                                    <ul class="com_list_ul_li_extra_ul" id="gallery_2227442">
+                                                    </ul>
+                                                </div>
+                                                <div class="com_list_ul_li_replypost">
+                                                    <p class="replypost_floor_p">33楼</p><span class="replypost_time_span">2019-01-14 00:16</span>
+                                                    <a class="replypost_reply_a" data-type="reply">回复</a>
+                                                    <a class="replypost_report_a" data-type="denounce" title="举报" onclick="denounce_comment(this);">举报</a>
+                                                    <div class="replypost_manage_box">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="postmore"><span class="postmore_span">
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="com_list_box_ul_li" id="comment_2227442" data-comment_id="2227442" model-node="comment_list">
+                                            <div class="com_list_ul_li_im">
+                                                <a href="https://www.nyato.com/user/2889929" class="com_list_ul_li_a">
+                                                    <img src="//img.nyato.com/data/upload/avatar/2019/0113/18/5c3b0eff92385.png!50x50cut" alt="禾禾禾奈" class="con_list_ul_li_img">
+                                                </a>
+
+                                                <div class="com_list_ul_li_focus">
+                                                    <a class="com_list_ul_li_focusOn_a" data-type="doFollow" onclick="doFollow(this, 2889929);">关注</a>
+                                                    <a class="com_list_ul_li_focusOff_a" data-type="unFollow" onclick="doFollow(this, 2889929);" style="display: none;">取消关注</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="com_list_ul_li_con">
+                                                <a href="https://www.nyato.com/user/2889929" class="com_list_ul_li_focus_tit_a" name="comment_user" data-uid="2889929">禾禾禾奈</a>
+                                                <div class="com_list_ul_li_con_box">
+                                                    <span name="com_list_ul_li_con_box_span">怎么不修紧一点啊老妹</span>
+                                                </div>
+                                                <div class="com_list_ul_li_con_extra">
+                                                    <ul class="com_list_ul_li_extra_ul" id="gallery_2227442">
+                                                    </ul>
+                                                </div>
+                                                <div class="com_list_ul_li_replypost">
+                                                    <p class="replypost_floor_p">33楼</p><span class="replypost_time_span">2019-01-14 00:16</span>
+                                                    <a class="replypost_reply_a" data-type="reply">回复</a>
+                                                    <a class="replypost_report_a" data-type="denounce" title="举报" onclick="denounce_comment(this);">举报</a>
+                                                    <div class="replypost_manage_box">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="postmore"><span class="postmore_span">
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="com_list_box_page">
+                                        <div class="com_list_box_page_con">
+                                            <a class="current_page">1</a>
+                                            <a href="#page-2" class="liti" onclick="return get_comment(2);">2</a>
+                                            <a href="#page-3" class="liti" onclick="return get_comment(3);">3</a>
+                                            <a href="#page-4" class="liti" onclick="return get_comment(4);">4</a>
+                                            <a href="#page-2" class="liti" onclick="return get_comment(2);">下一页</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            $(".comment_box li a").click(function(){
+                                $(this).parents("ul").find("a").removeClass("current");
+                                $(this).addClass("current");
+                                var li_index=$(this).parent("li").index();
+                                var lln=$(this).parents(".comment_box").siblings(".comment_list")
+                                lln.children(".commentbox").hide().eq(li_index).show();
+                            });
+
+                            function get_hash() {
+                                var hash_args = {}, hash = window.location.hash.replace(/^#+/, ''), i, arg,  key, value;
+                                hash = hash.split('&');
+                                for (i in hash) {
+                                    arg = hash[i].split('=');
+                                    if (arg.length == 2) {
+                                        key = arg[0];
+                                        value = arg[1];} else if (arg.length == 1 && arg[0] != '') {
+                                        key = arg[0];
+                                        value = "";
+                                    } else {
+                                        continue;
+                                    }
+                                    hash_args[key] = value;
+                                }
+                                return hash_args;
+                            }
+
+                            function set_hash(hash_args) {
+                                var hash, i, args = [],  key, value;
+                                for (key in hash_args) {
+                                    args.push(key + '=' + hash_args[key]);
+                                }
+                                window.location.hash = '#' + args.join('&');
+                                return true;
+                            }
+
+                            function author_only(uid) {
+                                var hash_args = get_hash();
+                                if (uid == window.author_uid) {
+                                    $('#btn_author_1').addClass('current');
+                                    $('#btn_author_0').removeClass('current');
+                                } else if (uid == 0) {
+                                    $('#btn_author_0').addClass('current');
+                                    $('#btn_author_1').removeClass('current');
+                                }
+
+                                hash_args['author'] = uid;
+                                set_hash(hash_args);
+                                get_comment(1);
+                            }
+
+                            function get_comment(page, change_hash) {
+                                var feed_id = "899498";
+                                var hash_args = get_hash();
+
+                                change_hash = typeof change_hash == 'boolean' ? change_hash : true;
+                                if (typeof page == 'undefined') {
+                                    page = hash_args['page'];
+                                } else {
+                                    page = parseInt(page) <= 0 ? 1 : parseInt(page);
+                                    hash_args['page'] = page;
+                                }
+
+                                var author = parseInt(hash_args['author']);
+                                if (isNaN(author)) {
+                                    author = 0;
+                                }
+                                // $('#comment_page').html('<div id="' + hash + '" class="center">正在加载评论……</div>');
+
+                                $.post("https://www.nyato.com/index.php?app=index&mod=Street&act=get_comment" , { "feed_id" : feed_id, "author" : author, "p" : page})
+                                    .done(function (data) {
+                                        var json, e;
+                                        try {
+                                            json = eval("(" + data + ")");
+                                        } catch (e) {
+                                            if (typeof data == 'object') {
+                                                json = data;
+                                            } else {
+                                                json = { "status": 0, "info": "返回错误"};
+                                            }
+                                        }
+
+                                        if (json.status) {
+                                            if (change_hash) {
+                                                set_hash(hash_args);
+                                            }
+                                            $('#comment_page').html(json.data);
+                                            M($('#comment_page')[0]);
+                                            if (change_hash) {
+                                                $("html,body").animate({ scrollTop: $('#comment_page').offset().top - $('.community-header').height()});
+                                            }
+                                        } else {
+                                            console.log(data);
+                                        }
+
+                                    })
+                                    .fail(function (data) {
+                                        console.log(data);
+                                    });
+
+                                return false;
+                            }
+
+                            function get_more_comment(comment_id, page) {
+                                page = parseInt(page) <= 0 ? 1 : parseInt(page);
+
+                                $.post("https://www.nyato.com/index.php?app=index&mod=Street&act=get_more_comment" , { "comment_id" : comment_id, "p" : page})
+                                    .done(function (data) {
+                                        var json, e;
+                                        try {
+                                            json = eval("(" + data + ")");
+                                        } catch (e) {
+                                            if (typeof data == 'object') {
+                                                json = data;
+                                            } else {
+                                                json = { "status": 0, "info": "返回错误"};
+                                            }
+                                        }
+
+                                        if (json.status) {
+                                            $('#comment_replies_' + comment_id).html(json.data);
+                                            M($('#comment_replies_' + comment_id)[0]);
+                                        } else {
+                                            console.log(data);
+                                        }
+
+                                    })
+                                    .fail(function (data) {
+                                        console.log(data);
+                                    });
+
+                                return false;
+                            }
+
+                            $(function () {
+                                var hash_args = get_hash();
+                                var page = 1;
+                                try {
+                                    if (hash_args['page'] > 1) {
+                                        page = hash_args['page'];
+                                    }
+                                } catch (e) {}
+
+                                get_comment(page, false);});
+
+                            function reply_comment(comment_id) {
+                                var comment_obj = $("#comment_" + comment_id),
+                                    comment_uid = $.trim(comment_obj.find('[name=comment_user]:first').data('uid')),
+                                    comment_user = $.trim(comment_obj.find('[name=comment_user]:first').text()),
+                                    comment_content = $.trim(comment_obj.find('[name=comment_content]:first').text());
+
+                                if (comment_content.length > 20) {
+                                    comment_content = comment_content.substr(0, 20) + '...';
+                                }
+
+                                $('#reply_user').text(comment_user);
+                                $('#reply_content').text(comment_content);
+                                $('#do_comment_v4').attr('to_comment_id', comment_id);
+                                $('#do_comment_v4').attr('to_uid', comment_uid);
+                                $('#reply_block').slideDown(500);
+                                goto_comment_box();
+                            }
+
+                            function reply_cancel() {
+                                $('#do_comment_v4').attr('to_comment_id', 0);
+                                $('#do_comment_v4').attr('to_uid', 0);
+                                $('#reply_block').slideUp(500);
+                            }
+
+                            function goto_comment_box() {
+                                $("html,body").animate({ scrollTop: $('.post_comment').offset().top - $('.community-header').height() - 50});
+                                $('#comment_inputor').focus();
+                            }
+
+                            $('#comment_page').on('click', '.praise', function () {
+                                var type = $(this).data('type'),
+                                    comment_id = $(this).parents('[data-comment_id]:first').data('comment_id');
+
+                                if (window.MID == 0) {
+                                    $('.thickbox:first').click();
+                                    return false;
+                                }
+
+                                switch (type) {
+                                    case 'reply':
+                                        reply_comment(comment_id);
+                                        break;
+                                    case 'like':
+                                        like_comment(comment_id);
+                                        break;
+                                    default:
+                                        break;
+                                }
+                            });
+                        </script>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+            <div class="invitation_right_detail">
+                <div class="right_detail_info" id="author_info">
+                    <div class="info_photo">
+                        <a href="https://www.nyato.com/user/11035" class="info_photo_a">
+                            <img src="//img.nyato.com/data/upload/avatar/2018/0319/10/5aaf1ab8aa0c8.jpg!100x100cut" class="info_photo_img">
+                        </a>
+
+                        <div class="info_focus">
+                            <a class="info_focus_on" data-type="doFollow" onclick="doFollow(this, 11035);">关注</a>
+                            <a class="info_focus_off" data-type="unFollow" onclick="doFollow(this, 11035);" style="display: none;">取消关注</a>
+                        </div>
+                    </div>
+                    <div class="info_con">
+                        <h1 class="info_con_h1">
+                            <a href="https://www.nyato.com/user/11035" class="info_con_h1_a" title="展务娘">展务娘</a>
+                        </h1>
+                        <p class="info_con_p">客服在线时间：9:00~18:00
+                            ٩( \\\\\\\'ω\\\\\\\' )و</p>
+                        <div class="info_con_focusInfo">
+                            关注：<span class="info_con_focusInfo_span">169</span>
+                            粉丝：<span class="info_con_focusInfo_span">134928</span>
+                        </div>
+
+                        <div class="info_con_btn">
+                            <ul class="info_con_btn_ul">
+                                <li class="info_con_btn_ul_li" onclick="$('.thickbox:first').click();">
+                                    <b class="info_con_btn_ul_li_b1"></b>点赞
+                                </li>
+                                <li class="info_con_btn_ul_li" onclick="$('.thickbox:first').click();">
+                                    <b class="info_con_btn_ul_li_b2"></b>评论
+                                </li>
+                                <li class="info_con_btn_ul_li" onclick="$('.thickbox:first').click();">
+                                    <b class="info_con_btn_ul_li_b3"></b>收藏
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="right_detail_recommend" data-num="0">
+                    <div class="right_detail_recommend_tit">
+                        帖子推荐
+                    </div>
+                    <div class="right_detail_recommend_con">
+                        <ul class="recommend_con_ul" style="display: block;">
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899727" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a_span1">1</span>
+                                    求魔道组团
+                                </a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899265" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a_span1">2</span>
+                                    可以穿lolita去吗？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/898864" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a_span1">3</span>
+                                    这里……或许会出成年江澄，欢迎勾搭</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899983" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a_span2">4</span>
+                                    有人一起去莫？？？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/898477" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a_span2">5</span>
+                                    有兴趣 东京食尸鬼 cp组队的吗？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899528" class="w=recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a_span2">6</span>
+                                    这里师姐少女版，有人出阿澄或者阿羡，子轩吗？？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/898607" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a_span2">7</span>
+                                    要妆娘啊~两天都去的最好，还没确定哪一天去。cos人物:宇智波鼬
+                                    QQ2028994437</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899350" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a_span2">8</span>
+                                    是的我又来扩列了!</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/898032" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a_span2">9</span>
+                                    有没有小姐姐一起逛漫展的鸭？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899114" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a_span2">10</span>
+                                    扩列，一起玩鸭</a>
+                            </li>
+                        </ul>
+
+                        <ul class="recommend_con_ul" style="display: none;">
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899727" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">1</span>
+                                    求魔道组团
+                                </a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899265" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">2</span>
+                                    可以穿lolita去吗？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/898864" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">3</span>
+                                    这里……或许会出成年江澄，欢迎勾搭</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899983" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">4</span>
+                                    有人一起去莫？？？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/898477" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">5</span>
+                                    有兴趣 东京食尸鬼 cp组队的吗？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899528" class="w=recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">6</span>
+                                    这里师姐少女版，有人出阿澄或者阿羡，子轩吗？？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/898607" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">7</span>
+                                    要妆娘啊~两天都去的最好，还没确定哪一天去。cos人物:宇智波鼬
+                                    QQ2028994437</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899350" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">8</span>
+                                    是的我又来扩列了!</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/898032" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">9</span>
+                                    有没有小姐姐一起逛漫展的鸭？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899114" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">10</span>
+                                    扩列，一起玩鸭</a>
+                            </li>
+                        </ul>
+                        <ul class="recommend_con_ul" style="display: none;">
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899727" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">1</span>
+                                    求魔道组团
+                                </a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899265" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">2</span>
+                                    可以穿lolita去吗？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/898864" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">3</span>
+                                    这里……或许会出成年江澄，欢迎勾搭</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899983" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">4</span>
+                                    有人一起去莫？？？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/898477" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">5</span>
+                                    有兴趣 东京食尸鬼 cp组队的吗？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899528" class="w=recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">6</span>
+                                    这里师姐少女版，有人出阿澄或者阿羡，子轩吗？？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/898607" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">7</span>
+                                    要妆娘啊~两天都去的最好，还没确定哪一天去。cos人物:宇智波鼬
+                                    QQ2028994437</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899350" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">8</span>
+                                    是的我又来扩列了!</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/898032" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">9</span>
+                                    有没有小姐姐一起逛漫展的鸭？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899114" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">10</span>
+                                    扩列，一起玩鸭</a>
+                            </li>
+                        </ul>
+                        <ul class="recommend_con_ul" style="display: none;">
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899727" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">1</span>
+                                    求魔道组团
+                                </a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899265" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">2</span>
+                                    可以穿lolita去吗？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/898864" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">3</span>
+                                    这里……或许会出成年江澄，欢迎勾搭</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899983" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">4</span>
+                                    有人一起去莫？？？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/898477" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">5</span>
+                                    有兴趣 东京食尸鬼 cp组队的吗？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899528" class="w=recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">6</span>
+                                    这里师姐少女版，有人出阿澄或者阿羡，子轩吗？？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/898607" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">7</span>
+                                    要妆娘啊~两天都去的最好，还没确定哪一天去。cos人物:宇智波鼬
+                                    QQ2028994437</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899350" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">8</span>
+                                    是的我又来扩列了!</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/898032" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">9</span>
+                                    有没有小姐姐一起逛漫展的鸭？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899114" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">10</span>
+                                    扩列，一起玩鸭</a>
+                            </li>
+                        </ul>
+                        <ul class="recommend_con_ul" style="display: none;">
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899727" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">1</span>
+                                    求魔道组团
+                                </a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899265" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">2</span>
+                                    可以穿lolita去吗？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/898864" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">3</span>
+                                    这里……或许会出成年江澄，欢迎勾搭</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899983" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">4</span>
+                                    有人一起去莫？？？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/898477" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">5</span>
+                                    有兴趣 东京食尸鬼 cp组队的吗？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899528" class="w=recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">6</span>
+                                    这里师姐少女版，有人出阿澄或者阿羡，子轩吗？？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/898607" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">7</span>
+                                    要妆娘啊~两天都去的最好，还没确定哪一天去。cos人物:宇智波鼬
+                                    QQ2028994437</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899350" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">8</span>
+                                    是的我又来扩列了!</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/898032" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">9</span>
+                                    有没有小姐姐一起逛漫展的鸭？</a>
+                            </li>
+                            <li class="recommend_con_ul_li">
+                                <a href="https://www.nyato.com/forum/899114" class="recommend_con_ul_li_a">
+                                    <span class="recommend_con_ul_li_a">10</span>
+                                    扩列，一起玩鸭</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class=""></div>
+
+                <script type="text/javascript">
+                    $(".change_btn").click(function() {
+                        var box = $(this).parent().parent(),
+                            list = box.find('ul'),
+                            num = box.data('num'),
+                            max = list.length;
+
+                        num = (num + 1) % max;
+                        box.data('num', num);
+                        $(list.get(num)).css("display", "block").siblings("ul").css("display", "none");
+                    });
+                </script>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function checkin(){
+            if(MID==0){
+                ui.error('请先登录！');
+                return false;
+            }
+            var lock = $('#check_block').attr('lock');
+            if (lock == 1) {
+                ui.error('正在签到中……');
+                return false;
+            }
+            $('#check_block').attr('lock', 1);
+
+            $.post(U('widget/CheckIn/check_in') , {} , function (res){
+                if ( res ){
+                    $('#check_block').hide();
+                    $('#checked_block').show();
+                    $('#checkin_con_num').text(res);
+
+                    ui.success('签到成功');}else{
+                    ui.error('签到失败！');
+                }
+            })
+                .always(function () {
+                    $('#check_block').attr('lock', 0);
+                });
+        }
+    </script>
+
+    <div class="footer_top"></div>
+
+    <div class="footer">
+        <div class="footer_new">
+
+            <div class="footer_left">
+                <div class="footer_new_title">友情链接</div>
+                <ul class="footer_new_ul">
+                    <a href="http://www.moejam.com" class="footer_new_ul_a" target="_blank">梦域动漫网</a>
+                    <a href="http://www.missevan.com" class="footer_new_ul_a" target="_blank">Missevan</a>
+                    <a href="http://www.moe123.net/" class="footer_new_ul_a" target="_blank">萌导航</a>
+                    <a href="http://mag.moe/" class="footer_new_ul_a" target="_blank">卖萌</a>
+                    <a href="https://www.yuanyintang.com/" class="footer_new_ul_a" target="_blank">源音塘</a>
+                    <a href="http://www.comicyu.com" class="footer_new_ul_a" target="_blank">漫域网</a>
+                    <a href="http://www.5coser.com" class="footer_new_ul_a" target="_blank">桐萌动漫</a>
+                    <a href="http://www.u17.com/" class="footer_new_ul_a" target="_blank">有妖气</a>
+                    <a href="http://www.cccnews.com.cn/" class="footer_new_ul_a" target="_blank">中国动漫产业网</a>
+                    <a href="http://www.mz-oneacg.com/" class="footer_new_ul_a" target="_blank">梦之翼</a>
+                    <a href="http://mcyacg.com/" class="footer_new_ul_a" target="_blank">梦次元</a>
+                    <a href="http://www.ishangman.com/" class="footer_new_ul_a" target="_blank">尚漫</a>
+                    <a href="http://comic.le.com/" class="footer_new_ul_a" target="_blank">乐视动漫频道</a>
+                    <a href="http://www.gxdmw.com" class="footer_new_ul_a" target="_blank">高校动漫网</a>
+                    <a href="http://www.acgvr.com/index.html" class="footer_new_ul_a" target="_blank">超次元</a>
+                    <a href="http://www.linovel.net/" class="footer_new_ul_a" target="_blank">轻之文库</a>
+                    <a href="https://www.douyu.com" class="footer_new_ul_a" target="_blank">斗鱼</a>
+                    <a href="https://www.dajiaochongmanhua.com/" class="footer_new_ul_a" target="_blank">大角虫漫画</a>
+                </ul>
+
+
+            </div>
+
+            <div class="footer_info">
+                <div class="footer_info_title">官方信息</div>
+                <a title="点此切换手机版模式" class="footer_info_a" href="https://www.nyato.com/index.php?app=index&amp;mod=Index&amp;act=wwwToWap">Wap版</a>
+                <a title="法律声明" class="footer_info_a" href="statement.html">法律声明</a>
+                <a title="喵特工" class="footer_info_a" href="sta_agent">喵特工</a>
+                <a title="关于我们" class="footer_info_a" href="moelove.cn/">关于我们</a>
+                <a title="公司招聘" class="footer_info_a" href="moelove-Recruitment.html">公司招聘</a>
+                <a key="5492599f3b05a3da0fbc76d9" class="footer_info_a" href="http://www.anquan.org/authenticate/cert/?site=nyato.com&amp;at=realname" target="_blank">安全联盟</a>
+                <a title="关于萌爱" class="footer_info_a" href="about.html">社区历史</a>
+                <a title="联系我们" class="footer_info_a" href="help/">联系我们</a>
+                <a title="服务协议" class="footer_info_a" href="agreement.html">服务协议</a>
+                <a title="授权条款" class="footer_info_a" href="">授权条款</a>
+                <div class="footer_info_im"><img src="logo.png" class="footer_info_img"></div>
+            </div>
+
+            <div class="supervision">
+                <img src="img/footer/supervision1.png" alt="" class="supervision_img"><a href="http://www.miitbeian.gov.cn/" target="_blank" class="super_a">粤网文</a>
+                <img src="img/footer/supervision2.png" alt="" class="supervision_img"><a href="http://www.miitbeian.gov.cn/" target="_blank" class="super_a">粤公网安备</a>
+                <img src="ww.png" alt="" class="supervision_img"><a href="http://www.gdjubao.cn/" target="_blank" class="super_a">粤互联网违法和不良信息举报中心</a>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

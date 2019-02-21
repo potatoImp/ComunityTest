@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主站</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header_w">
+            <div class="logo"><a class="logo_a" href="" title=""></a></div>
+
+            <div class="nav">
+                <li class="nav_li"><a class="nav_li_a" title="主站" href="index.html" target="_self">主站</a></li>
+                <li class="nav_li"><a class="nav_li_a" title="博客" href="" target="_self">博客</a></li>
+                <li class="nav_li"><a class="nav_li_a" title="下载" href="" target="_self">下载</a></li>
+
+                <li class="nav_li_more"><a class="nav_li_a" title="更多" href="">更多</a>
+                    <div class="subnav" >
+                        <div class="subnav43"></div>
+                        <ul class="subnav_ul">
+                            <a class="subnav_ul_a" href="" title="" target="_self">下载</a>
+                            <a class="subnav_ul_a" href="" title="" target="_self"></a>
+                            <a class="subnav_ul_a" href="" title="" target="_self"></a>
+                        </ul>
+                    </div>
+                </li>
+                <div class="nav_part"></div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="search">
+                <div class="search_con">
+                    <input name="bolg" value="" type="hidden">
+                    <input name=""      value="" type="hidden">
+                    <input type="hidden" name="b" value="">
+                    <input type="hidden" name="" value="">
+                    <input id="search_input" class="search_input" type="text" name="" autocomplete="off" placeholder="文章、资源">
+                    <!--autocomplete="off"关闭自动记录 -->
+                    <a href="" class="search_a" onclick=""></a>
+                </div>
+
+            </div>
+
+            <div class="login">
+                <div class="login_nav">
+                    <li class="login_nav_li"><a class="login_nav_a" href="" title="登录社区">登录</a></li>
+                    <li class="login_nav_li"><a class="login_nav_a" href="" title="还没有账号？点此前往注册账号">注册账号</a></li>
+                </div>
+            </div>
+        </div>
+
+        <div class="header_tail"></div>
+
+    </div>
+
+    <div class="banner" >
+        <a  class="banner_a" href=""> </a>
+    </div>
+
+    <div class="container">
+
+        <div class="container_head">
+            <div class="container_head_left">
+                <div class="w100s" style="width: 100%">
+                    <script type="text/javascript" src="js/jquery.min.js"></script>
+                    <script type="text/javascript">
+                        $(document).ready(function(e) {
+                            var sWidth = $("#focuses").width();
+                            var len = $("#focuses ul li").length, sHeight=sWidth/2.321;
+                            var index = 0;
+                            var picTimer;
+                            $("#focuses ul li").css("width",sWidth);
+                            $("#focuses").css("height",sHeight+"px");
+                            var btn = "<div class='container_focuese_btn'><div class='btn_bg'><div class='btn_cur'>";
+                            for(var i=0; i < len; i++) {
+                                btn += "<span></span>";
+                            }
+                            btn += "</div></div></div>";
+                            $("#focuses").append(btn);
+                            $("#focuses ul li").each(function() {
+                                var focuText=$(this).find("a").attr("title"),
+                                    focuindex=$(this).index();
+                                $(".btn_cur .span").eq(focuindex).find(".work").text(focuText);
+
+                            });
+
+                            $("#focuses .btn_cur span").css("opacity",0.5).mouseenter(function() {
+                                index = $("#focuses .btn_cur span").index(this);
+                                showPics(index);
+                            }).eq(0).trigger("mouseenter");
+                            $("#focuses ul").css("width",sWidth * (len));
+
+                            $("#focuses").hover(function() {
+                                clearInterval(picTimer);
+                            },function() {
+                                picTimer = setInterval(function() {
+                                    showPics(index);
+                                    index++;
+                                    if(index == len) {index = 0;}
+                                },5000);
+                            }).trigger("mouseleave");
+
+                            function showPics(index) {
+                                var nowLeft = -index*sWidth;
+                                $("#focuses ul").stop(true,false).animate({"left":nowLeft},300);
+                                $("#focuses .btn_cur span").stop(true,false).removeClass("bg_cur").css("opacity",0.5).eq(index).stop(true,false).addClass("bg_cur").css("opacity",0.99);
+                            }
+                        });
+                    </script>
+                    <div id="focuses" class="container_head_left_focuese">
+                        <ul class="container_focuese_ul">
+                            <li class="container_focuese_li"><a title="1" href="" class="container_focuese_li_a" target="_blank" style="max-height: 214px;"><img alt="文本" class="container_focuese_img" src="img/1.png"></a>
+                                <div class="container_focuese_title">
+                                    <div class="container_focuese_text">
+                                        <a href="" class="container_focuese_text_a">111111111111111111111</a>
+                                    </div>
+
+                            </li>
+                            <li class="container_focuese_li"><a title="2" href="" class="container_focuese_li_a" target="_blank" style="max-height: 214px;"><img alt="文本" class="container_focuese_img" src="img/1.png"></a>
+                                <div class="container_focuese_title">
+                                    <div class="container_focuese_text">
+                                        <a href="" class="container_focuese_text_a">22222222222222222</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="container_focuese_li"><a title="3" href="" class="container_focuese_li_a" target="_blank" style="max-height: 214px;"><img alt="文本" class="container_focuese_img" src="img/1.png"></a>
+                                <div class="container_focuese_title">
+                                    <div class="container_focuese_text">
+                                        <a href="" class="container_focuese_text_a">333333333333333333</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="container_focuese_li"><a title="4" href="" class="container_focuese_li_a" target="_blank" style="max-height: 214px;"><img alt="文本" class="container_focuese_img" src="img/1.png"></a>
+                                <div class="container_focuese_title">
+                                    <div class="container_focuese_text">
+                                        <a href="" class="container_focuese_text_a">44444444444444444444</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container_head_right">
+                <div class="p15">
+                    <div></div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="w100s">
+
+            <div class="container_left">
+
+                <div class="container_left_con">
+                    <div class="left_navigation">
+
+                        <div class="left_navigation_con">
+                            <div class="left_nav_title">
+
+                                选择类别xxxxx
+                                <a href="" class="left_nav_title_a">更多&gt;</a>
+
+                            </div>
+                            <ul class="left_nav_ul">
+                                <li class="left_nav_ul_li"><a href="" class="left_nav_ul_a"><span class="left_nav_ul_span1">1</span>类别一</a></li>
+                                <li class="left_nav_ul_li"><a href="" class="left_nav_ul_a"><span class="left_nav_ul_span2">2</span>类别一</a></li>
+                                <li class="left_nav_ul_li"><a href="" class="left_nav_ul_a"><span class="left_nav_ul_span3">3</span>类别一</a></li>
+                                <li class="left_nav_ul_li"><a href="" class="left_nav_ul_a"><span class="left_nav_ul_span">4</span>类别一</a></li>
+                                <li class="left_nav_ul_li"><a href="" class="left_nav_ul_a"><span class="left_nav_ul_span">5</span>类别一</a></li>
+                                <li class="left_nav_ul_li"><a href="" class="left_nav_ul_a"><span class="left_nav_ul_span">6</span>类别一</a></li>
+                                <li class="left_nav_ul_li"><a href="" class="left_nav_ul_a"><span class="left_nav_ul_span">7</span>类别一</a></li>
+                                <li class="left_nav_ul_li"><a href="" class="left_nav_ul_a"><span class="left_nav_ul_span">8</span>类别一</a></li>
+                                <li class="left_nav_ul_li"><a href="" class="left_nav_ul_a"><span class="left_nav_ul_span">9</span>类别一</a></li>
+                                <li class="left_nav_ul_li"><a href="" class="left_nav_ul_a"><span class="left_nav_ul_span">10</span>类别一</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <style type="text/css">
+                        .postFix{
+                            margin-top: -35.75%;
+                            position: fixed;
+                        }
+                    </style>
+                    <script type="text/javascript">
+                        //悬浮
+                        $(function(){
+                            var menuTop = $(".left_navigation").offset().top;
+                            $(window).scroll(function(){
+                                if($(this).scrollTop() > menuTop+550){
+                                    $(".left_navigation").addClass("postFix");
+                                }else {
+                                    $(".left_navigation").removeClass("postFix");
+                                }
+                            })
+                        })
+                    </script>
+
+                </div>
+
+                <div class="left_navigation2">
+                    <a class="left_navigation2_a" title="展务娘新表情——由你创造" href="https://job.nyato.com/pj10127">
+                        <img src="img/nav.png" class="left_navigation2_img"><span class="left_navigation2_span">活动</span></a>
+                </div>
+
+            </div>
+
+            <div class="container_middle">
+
+                <dl class="container_mid_dl">
+                    <div class="container_mid_div">
+                        <dd class="container_mid_dd">
+                            <a href="" class="container_mid_dd_a"><img src="img/head.png" class="container_mid_dd_img"></a>
+                        </dd>
+
+                        <dt class="container_mid_dt">
+                            <a href="" class="container_mid_dt_a">用户1</a>
+                        <p class="container_mid_dt_p">2019-01-27 17:02 18分钟前 来自活动版区</p>
+
+
+                        <div class="container_mid_dt_con">
+                            <span class="container_mid_dt_con_tit_span">某天</span>
+                            <span class="container_mid_dt_con_span">发送了正序结果健康证大V客户和你</span>
+                            <div class="container_mid_dt_con_im">
+                                <a class="container_mid_dt_con_a">
+                                    <img src="" class="container_mid_dt_con_img">
+                                </a>
+                                <a class="container_mid_dt_con_a">
+                                    <img src="" class="container_mid_dt_con_img">
+                                </a>
+                            </div>
+
+                            <div class="clear"></div>
+                        </div>
+                        </dt>
+
+                        <div class="clear"></div>
+                    </div>
+                </dl>
+                <dl class="container_mid_dl">
+                    <div class="container_mid_div">
+                        <dd class="container_mid_dd">
+                            <a href="" class="container_mid_dd_a"><img src="" class="container_mid_dd_img"></a>
+                        </dd>
+
+                        <dt class="container_mid_dt">
+                            <a href="" class="container_mid_dt_a">用户1</a>
+                        <p class="container_mid_dt_p">2019-01-27 17:02 18分钟前 来自活动版区</p>
+
+                        <div class="container_mid_dt_con">
+                            <span class="container_mid_dt_con_tit_span">某天</span>
+                            <span class="container_mid_dt_con_span">发送了正序结果健康证大V客户和你</span>
+                            <div class="container_mid_dt_con_im">
+                                <a class="container_mid_dt_con_a">
+                                    <img src="" class="container_mid_dt_con_img">
+                                </a>
+                                <a class="container_mid_dt_con_a">
+                                    <img src="" class="container_mid_dt_con_img">
+                                </a>
+                            </div>
+
+                            <div class="clear"></div>
+                        </div>
+                        </dt>
+
+                        <div class="clear"></div>
+                    </div>
+                </dl>
+                <dl class="container_mid_dl">
+                    <div class="container_mid_div">
+                        <dd class="container_mid_dd">
+                            <a href="" class="container_mid_dd_a"><img src="img/head.png" class="container_mid_dd_img"></a>
+                        </dd>
+
+                        <dt class="container_mid_dt">
+                            <a href="" class="container_mid_dt_a">用户1</a>
+                        <p class="container_mid_dt_p">2019-01-27 17:02 18分钟前 来自活动版区</p>
+
+
+                        <div class="container_mid_dt_con">
+                            <span class="container_mid_dt_con_tit_span">某天</span>
+                            <span class="container_mid_dt_con_span">发送了正序结果健康证大V客户和你</span>
+                            <div class="container_mid_dt_con_im">
+                                <a class="container_mid_dt_con_a">
+                                    <img src="" class="container_mid_dt_con_img">
+                                </a>
+                                <a class="container_mid_dt_con_a">
+                                    <img src="" class="container_mid_dt_con_img">
+                                </a>
+                            </div>
+
+                            <div class="clear"></div>
+                        </div>
+                        </dt>
+
+                        <div class="clear"></div>
+                    </div>
+                </dl>
+                <dl class="container_mid_dl">
+                    <div class="container_mid_div">
+                        <dd class="container_mid_dd">
+                            <a href="" class="container_mid_dd_a"><img src="img/head.png" class="container_mid_dd_img"></a>
+                        </dd>
+
+                        <dt class="container_mid_dt">
+                            <a href="" class="container_mid_dt_a">用户1</a>
+                        <p class="container_mid_dt_p">2019-01-27 17:02 18分钟前 来自活动版区</p>
+
+
+                        <div class="container_mid_dt_con">
+                            <span class="container_mid_dt_con_tit_span">某天</span>
+                            <span class="container_mid_dt_con_span">发送了正序结果健康证大V客户和你</span>
+                            <div class="container_mid_dt_con_im">
+                                <a class="container_mid_dt_con_a">
+                                    <img src="" class="container_mid_dt_con_img">
+                                </a>
+                                <a class="container_mid_dt_con_a">
+                                    <img src="" class="container_mid_dt_con_img">
+                                </a>
+                            </div>
+
+                            <div class="clear"></div>
+                        </div>
+                        </dt>
+
+                        <div class="clear"></div>
+                    </div>
+                </dl>
+                <dl class="container_mid_dl">
+                    <div class="container_mid_div">
+                        <dd class="container_mid_dd">
+                            <a href="" class="container_mid_dd_a"><img src="" class="container_mid_dd_img"></a>
+                        </dd>
+
+                        <dt class="container_mid_dt">
+                            <a href="" class="container_mid_dt_a">用户1</a>
+                        <p class="container_mid_dt_p">2019-01-27 17:02 18分钟前 来自活动版区</p>
+
+                        <div class="container_mid_dt_con">
+                            <span class="container_mid_dt_con_tit_span">某天</span>
+                            <span class="container_mid_dt_con_span">发送了正序结果健康证大V客户和你</span>
+                            <div class="container_mid_dt_con_im">
+                                <a class="container_mid_dt_con_a">
+                                    <img src="" class="container_mid_dt_con_img">
+                                </a>
+                                <a class="container_mid_dt_con_a">
+                                    <img src="" class="container_mid_dt_con_img">
+                                </a>
+                            </div>
+
+                            <div class="clear"></div>
+                        </div>
+                        </dt>
+
+                        <div class="clear"></div>
+                    </div>
+                </dl>
+                <dl class="container_mid_dl">
+                    <div class="container_mid_div">
+                        <dd class="container_mid_dd">
+                            <a href="" class="container_mid_dd_a"><img src="" class="container_mid_dd_img"></a>
+                        </dd>
+
+                        <dt class="container_mid_dt">
+                            <a href="" class="container_mid_dt_a">用户1</a>
+                        <p class="container_mid_dt_p">2019-01-27 17:02 18分钟前 来自活动版区</p>
+
+                        <div class="container_mid_dt_con">
+                            <span class="container_mid_dt_con_tit_span">某天</span>
+                            <span class="container_mid_dt_con_span">发送了正序结果健康证大V客户和你</span>
+                            <div class="container_mid_dt_con_im">
+                                <a class="container_mid_dt_con_a">
+                                    <img src="" class="container_mid_dt_con_img">
+                                </a>
+                                <a class="container_mid_dt_con_a">
+                                    <img src="" class="container_mid_dt_con_img">
+                                </a>
+                            </div>
+
+                            <div class="clear"></div>
+                        </div>
+                        </dt>
+
+                        <div class="clear"></div>
+                    </div>
+                </dl>
+
+                <div id="loadMore" class="load_more_mid">
+                    <div id="loadMore_button">
+                        <a class="load_more_mid_a" style="display: inline-block" onclick="getHotPosts(2);" >查看更多</a>
+                    </div>
+                    <div id="loadMore_waitting" style="display: none">
+                        <img src="" width="" class="load_more_mid_img">正在加载请稍后
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container_right">
+
+            <div class="container_right_nav">
+                <div  class="right_nav_hot">
+                    <div class="right_nav_hot_con">
+                        <div class="right_nav_hot_tit">热门话题<a href="" class="right_nav_hot_tit_a">更多&gt;</a>
+                        </div>
+                        <ul class="right_nav_hot_ul">
+                            <li class="right_nav_hot_li">
+                                <a href="" class="right_nav_hot_a"><span class="right_nav_hot_a_word">#xxxxx#</span><span class="right_nav_hot_a_num">12345</span></a>
+                            </li>
+                            <li class="right_nav_hot_li">
+                                <a href="" class="right_nav_hot_a"><span class="right_nav_hot_a_word">#xxxxx#</span><span class="right_nav_hot_a_num">12345</span></a>
+                            </li>
+                            <li class="right_nav_hot_li">
+                                <a href="" class="right_nav_hot_a"><span class="right_nav_hot_a_word">#xxxxx#</span><span class="right_nav_hot_a_num">12345</span></a>
+                            </li>
+                            <li class="right_nav_hot_li">
+                                <a href="" class="right_nav_hot_a"><span class="right_nav_hot_a_word">#xxxxx#</span><span class="right_nav_hot_a_num">12345</span></a>
+                            </li>
+                            <li class="right_nav_hot_li">
+                                <a href="" class="right_nav_hot_a"><span class="right_nav_hot_a_word">#xxxxx#</span><span class="right_nav_hot_a_num">12345</span></a>
+                            </li>
+                            <li class="right_nav_hot_li">
+                                <a href="" class="right_nav_hot_a"><span class="right_nav_hot_a_word">#xxxxx#</span><span class="right_nav_hot_a_num">12345</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <style type="text/css">
+                    .hotFix{
+                        margin-top: -35.8%;
+
+                        position: fixed;
+                    }
+                    .postLeft{
+                        width: 1px;
+                        float: left;
+                        margin-right: 18%;
+                    }
+                </style>
+                <script type="text/javascript">
+                    //悬浮
+                    $(function(){
+                        var menuTop = $(".right_nav_hot").offset().top;
+                        $(window).scroll(function(){
+                            if($(this).scrollTop() > menuTop*2.1){
+                                $(".right_nav_hot").addClass("hotFix");
+                            }else {
+                                $(".right_nav_hot").removeClass("hotFix");
+                            }
+                        })
+                    })
+                </script>
+
+            </div>
+
+            <div class="index_notice_hidden">
+                <div class="index_notice_hidden_tit">公告板</div>
+                <div class="index_notice_hidden_body">
+                    <a href="" class="index_notice_hidden_body_a"><span class="index_notice_hidden_body_span">【知识王第七期】猜猜我是谁？</span></a>
+                    <a href="" class="index_notice_hidden_body_a"><span class="index_notice_hidden_body_span">【重磅】喵特扭蛋商城春节期间照常发货!!!</span></a>
+                    <a href="" class="index_notice_hidden_body_a"><span class="index_notice_hidden_body_span">第42期喵特扭蛋手速王诞生！！</span></a>
+                    <a href="" class="index_notice_hidden_body_a"><span class="index_notice_hidden_body_span">【知识王第七期】猜猜我是谁？</span></a>
+                    <a href="" class="index_notice_hidden_body_a"><span class="index_notice_hidden_body_span">【知识王第七期】猜猜我是谁？</span></a>
+                </div>
+            </div>
+
+            <div class="index_consult_hidden">
+                <div class="w100s">
+                    <ul class="index_consult_ul">
+                        <li class="index_consult_li">
+                            <a href="" class="index_consult_li_a">
+                                <div class="index_consult_li_tit">
+                                    <div class="index_consult_li_img"></div>喵特事务所
+                                </div>
+
+                                <div class="index_consult_li_note">
+                                    <span class="index_consult_note_span">专门处理投诉、反馈、合作联系相关事宜</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="index_consult_li">
+                            <a href="" class="index_consult_li_a"></a>
+
+                            <div class="index_consult_li_tit" style="background-color: #546b5d;">
+                                <div class="index_consult_li_img"></div>喵特事务所
+                            </div>
+
+                            <div class="index_consult_li_note">
+                                <span class="index_consult_note_span">专门处理投诉、反馈、合作联系相关事宜</span>
+                            </div>
+
+                        </li>
+                        <li class="index_consult_li">
+                            <a href="" class="index_consult_li_a"></a>
+
+                            <div class="index_consult_li_tit" style="background-color: #7896b1">
+                                <div class="index_consult_li_img"></div>公告板
+                            </div>
+
+                            <div class="index_consult_li_note">
+                                <span class="index_consult_note_span">喵特相关重要消息发布在这里</span>
+                            </div>
+
+                        </li>
+                        <li class="index_consult_li">
+                            <a href="" class="index_consult_li_a"></a>
+
+                            <div class="index_consult_li_tit" style="background-color: #9a6267">
+                                <div class="index_consult_li_img"></div>新手帮助
+                            </div>
+
+                            <div class="index_consult_li_note">
+                                <span class="index_consult_note_span">对平台不熟悉可以来这里进行咨询</span>
+                            </div>
+
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="clear"></div>
+
+    </div>
+    <script>
+        $('.sift_content').on('click', 'a[href]', function(event){
+            event.stopPropagation();
+        }).on('click', 'dl', function(event){
+            openPost(this);
+            event.stopPropagation();
+        });
+
+    </script>
+
+    <div class="hidden" style="height: 100px;">
+        <div class="hidden_button" style="margin-right: -106px;">
+            <div class="changyongright">
+                <script type="text/javascript">
+                    $(function(){
+                        $(".changyongright .rollback").click(function(){
+                            $("html,body").animate({scrollTop:"0px"},100);
+                        });
+                    });
+                </script>
+                <a title="回到顶部" class="rollback"><img src="img/rollback.png"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer_new">
+
+            <div class="footer_left">
+                <div class="footer_new_title">友情链接</div>
+                <ul class="footer_new_ul">
+                    <a href="http://www.moejam.com" class="footer_new_ul_a" target="_blank">梦域动漫网</a>
+                    <a href="http://www.missevan.com" class="footer_new_ul_a" target="_blank">Missevan</a>
+                    <a href="http://www.moe123.net/" class="footer_new_ul_a" target="_blank">萌导航</a>
+                    <a href="http://mag.moe/" class="footer_new_ul_a" target="_blank">卖萌</a>
+                    <a href="https://www.yuanyintang.com/" class="footer_new_ul_a" target="_blank">源音塘</a>
+                    <a href="http://www.comicyu.com" class="footer_new_ul_a" target="_blank">漫域网</a>
+                    <a href="http://www.5coser.com" class="footer_new_ul_a" target="_blank">桐萌动漫</a>
+                    <a href="http://www.u17.com/" class="footer_new_ul_a" target="_blank">有妖气</a>
+                    <a href="http://www.cccnews.com.cn/" class="footer_new_ul_a" target="_blank">中国动漫产业网</a>
+                    <a href="http://www.mz-oneacg.com/" class="footer_new_ul_a" target="_blank">梦之翼</a>
+                    <a href="http://mcyacg.com/" class="footer_new_ul_a" target="_blank">梦次元</a>
+                    <a href="http://www.ishangman.com/" class="footer_new_ul_a" target="_blank">尚漫</a>
+                    <a href="http://comic.le.com/" class="footer_new_ul_a" target="_blank">乐视动漫频道</a>
+                    <a href="http://www.gxdmw.com" class="footer_new_ul_a" target="_blank">高校动漫网</a>
+                    <a href="http://www.acgvr.com/index.html" class="footer_new_ul_a" target="_blank">超次元</a>
+                    <a href="http://www.linovel.net/" class="footer_new_ul_a" target="_blank">轻之文库</a>
+                    <a href="https://www.douyu.com" class="footer_new_ul_a" target="_blank">斗鱼</a>
+                    <a href="https://www.dajiaochongmanhua.com/" class="footer_new_ul_a" target="_blank">大角虫漫画</a>
+                </ul>
+
+
+            </div>
+
+            <div class="footer_info">
+                <div class="footer_info_title">官方信息</div>
+                <a title="点此切换手机版模式" class="footer_info_a" href="https://www.nyato.com/index.php?app=index&amp;mod=Index&amp;act=wwwToWap">Wap版</a>
+                <a title="法律声明" class="footer_info_a" href="statement.html">法律声明</a>
+                <a title="喵特工" class="footer_info_a" href="sta_agent">喵特工</a>
+                <a title="关于我们" class="footer_info_a" href="moelove.cn/">关于我们</a>
+                <a title="公司招聘" class="footer_info_a" href="moelove-Recruitment.html">公司招聘</a>
+                <a key="5492599f3b05a3da0fbc76d9" class="footer_info_a" href="http://www.anquan.org/authenticate/cert/?site=nyato.com&amp;at=realname" target="_blank">安全联盟</a>
+                <a title="关于萌爱" class="footer_info_a" href="about.html">社区历史</a>
+                <a title="联系我们" class="footer_info_a" href="help/">联系我们</a>
+                <a title="服务协议" class="footer_info_a" href="agreement.html">服务协议</a>
+                <a title="授权条款" class="footer_info_a" href="">授权条款</a>
+                <div class="footer_info_im"><img src="logo.png" class="footer_info_img"></div>
+            </div>
+
+            <div class="supervision">
+                <img src="img/footer/supervision1.png" alt="" class="supervision_img"><a href="http://www.miitbeian.gov.cn/" target="_blank" class="super_a">粤网文</a>
+                <img src="img/footer/supervision2.png" alt="" class="supervision_img"><a href="http://www.miitbeian.gov.cn/" target="_blank" class="super_a">粤公网安备</a>
+                <img src="ww.png" alt="" class="supervision_img"><a href="http://www.gdjubao.cn/" target="_blank" class="super_a">粤互联网违法和不良信息举报中心</a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class=""></div>
+
+
+</body>
+</html>
